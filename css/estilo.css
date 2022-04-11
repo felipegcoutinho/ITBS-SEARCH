@@ -1,0 +1,28 @@
+html {
+  color: #FFF;
+}
+
+.bg-green {
+  background-color: #157347;
+}
+
+.bg-darker {
+  background-color: #000000;
+}
+
+.bg-white {
+  background-color: #FFF;
+}
+
+.texto-branco {
+  color: #FFF;
+}
+
+.btn-group-xs>.btn,
+.btn-xs {
+  padding: .25rem .4rem;
+  font-size: .775rem;
+  line-height: .5;
+  border-radius: .2rem;
+}
+
