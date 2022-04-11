@@ -5,7 +5,7 @@ function format(d) {
 }
 
 $(document).ready(function () {
-    var table = $('#example').DataTable({
+    var table = $('#tabela_main').DataTable({
         ajax: "banco.json",
         dom: 'Plfrtip',
         language:
@@ -85,7 +85,7 @@ $(document).ready(function () {
     });
 
     // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'td.details-control', function () {
+    $('#tabela_main tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var tdi = tr.find("i");
         var row = table.row(tr);
