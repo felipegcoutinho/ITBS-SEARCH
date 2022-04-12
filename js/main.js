@@ -26,12 +26,11 @@ $(document).ready(function () {
                 { data: 'modelo' },
                 { data: 'setor' },
                 { data: 'categoria' },
-                { data: 'caracteristicas' },
+                { data: 'tags' },
                 { data: 'guia' },
                 { data: 'datasheet' },
                 { data: 'manual' },
                 { data: 'pagina' },
-                { data: 'descricao' },
             ],
 
         searchPanes: {
@@ -56,29 +55,26 @@ $(document).ready(function () {
             },
 
             {
-                data: 'caracteristicas',
-                "render": function (data, type, row) {
-                    var caracteristicas = data.split(' | ');
-                    return type === "display" || type === "filter" ?
-                        '<a href="# "class="btn btn-warning btn-xs">' + caracteristicas[0] + '</a> ' +
-                        '<a href="# "class="btn btn-danger btn-xs">' + caracteristicas[1] + '</a> ' +
-                        '<a href="# "class="btn btn-secondary btn-xs">' + caracteristicas[2] + '</a> ' +
-                        '<a href="# "class="btn btn-info btn-xs">' + caracteristicas[3] + '</a> ' +
-                        '<a href="# "class="btn btn-success btn-xs">' + caracteristicas[4] + '</a> ' :
-                        data;
+                data: 'tags',
+                "render": function (data, type, row) {                                            
+                    return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ' +
+                        '<a href="# "class="btn btn-danger btn-xs">' + row.tags2 + '</a> ' +
+                        '<a href="# "class="btn btn-secondary btn-xs">' + row.tags3 + '</a> ' +
+                        '<a href="# "class="btn btn-info btn-xs">' + row.tags4 + '</a> ' +
+                        '<a href="# "class="btn btn-success btn-xs">' + row.tags5 + '</a> ' 
                 },
-                "targets": 'Caracteristicas'
+                "targets": 'tags',
             },
 
             {
-                "render": function (data, type, row) {
-                    return '<b>' + row.modelo + '</b>';
+                "render": function (data, type, row) {                    
+                    return '<b>' + row.modelo + '</b>';                    
                 },
                 "targets": 'Modelo'
             },
             {
                 "visible": false,
-                "targets": ['Guia','Datasheet','Manual','Pagina']
+                "targets": ['Guia', 'Datasheet', 'Manual', 'Pagina']
             }
         ]
     });
