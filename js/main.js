@@ -27,7 +27,6 @@ $(document).ready(function () {
                 { data: 'setor' },
                 { data: 'categoria' },
                 { data: 'caracteristicas' },
-                { data: '' },
                 { data: 'guia' },
                 { data: 'datasheet' },
                 { data: 'manual' },
@@ -43,7 +42,7 @@ $(document).ready(function () {
                 searchPanes: {
                     show: true,
                 },
-                targets: [1, 2, 3]
+                targets: ['Modelo', 'Setor', 'Categoria']
             },
             {
                 "render": function (data, type, row) {
@@ -53,7 +52,7 @@ $(document).ready(function () {
                         '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
                         '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div>';
                 },
-                "targets": 5
+                "targets": 'Manuais'
             },
 
             {
@@ -68,18 +67,18 @@ $(document).ready(function () {
                         '<a href="# "class="btn btn-success btn-xs">' + caracteristicas[4] + '</a> ' :
                         data;
                 },
-                "targets": 4
+                "targets": 'Caracteristicas'
             },
 
             {
                 "render": function (data, type, row) {
                     return '<b>' + row.modelo + '</b>';
                 },
-                "targets": 1
+                "targets": 'Modelo'
             },
             {
                 "visible": false,
-                "targets": [6, 7, 8, 9, 10]
+                "targets": ['Guia','Datasheet','Manual','Pagina']
             }
         ]
     });
