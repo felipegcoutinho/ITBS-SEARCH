@@ -54,8 +54,7 @@ $(document).ready(function () {
                 "targets": 'Manuais'
             },
 
-            {
-                data: 'tags',
+            {               
                 "render": function (data, type, row) {                                            
                     return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ' +
                         '<a href="# "class="btn btn-danger btn-xs">' + row.tags2 + '</a> ' +
@@ -66,9 +65,27 @@ $(document).ready(function () {
                 "targets": 'tags',
             },
 
+            {               
+                "render": function (data, type, row) {                                            
+                    return '<span class="badge badge-outline-dark">' + row.setor + '</span> '
+                },
+                "targets": 'Setor',
+            },
+
+            {               
+                "render": function (data, type, row) {                                            
+                    return '<span class="badge badge-outline-success">' + row.categoria + '</span> '
+                },
+                "targets": 'Categoria',
+            },
+
             {
-                "render": function (data, type, row) {                    
-                    return '<b>' + row.modelo + '</b>';                    
+                "render": function (data, type, row) {   
+                    if (row.phaseout === 'EM LINHA')                 
+                        return '<span class="badge badge-outline-dark">' + row.modelo + '</span> <span class="btn btn-outline-success btn-xs">'+ row.phaseout +'</span>' ;
+                    else {
+                        return '<span class="badge badge-outline-dark">' + row.modelo + '</span> <span class="btn btn-outline-danger btn-xs">'+ row.phaseout +'</span>' ;
+                    }                    
                 },
                 "targets": 'Modelo'
             },

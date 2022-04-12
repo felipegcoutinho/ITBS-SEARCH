@@ -2,6 +2,7 @@
   "data": [
     {
       "modelo": "AP 1350 AC",
+      "phaseout": "EM LINHA",
       "setor": "Empresarial",
       "categoria": "Access Point",
       "tags1": "A",
@@ -19,6 +20,7 @@
     
     {
       "modelo": "AP 1750 AC",
+      "phaseout": "PHASE OUT",
       "setor": "Empresarial",
       "categoria": "Access Point",
       "tags1": "A",
