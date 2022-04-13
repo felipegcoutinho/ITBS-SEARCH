@@ -45,13 +45,7 @@
     
     
         <!-- Início da tabela principal-->
-        <section class="container bg-white mt-3 rounded">
-            <br>
-            <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Adicionar novo Produto
-  </button>
-  
+        <section class="container bg-white mt-3 rounded">                    
         
         <table id="tabela_main" class="table table-hover table-borderless table-responsive table-striped compact" style="width:100%">
             <thead>
@@ -72,57 +66,6 @@
         <!-- Fim da tabela principal-->
 </body>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Adicionar Produto</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="container">
-                <div class="row">
-                  <div class="col-md-6">
-                    <form method="post" name="contactForm">
-                      <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" required placeholder="Enter name">
-                      </div>
-                      <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" required placeholder="Enter Email">
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="Enter City">
-                      </div>
-                      <div class="form-group">
-                        <label for="email">State</label>
-                        <input type="text" class="form-control" id="state" placeholder="Enter State">
-                      </div>
-                      <div class="form-group">
-                        <label for="zip">Zip</label>
-                        <input type="text" class="form-control" id="zip" placeholder="Enter Zip Code">
-                      </div>
-                      <button type="submit" class="btn btn-primary addValue">Submit</button>
-                    </form>
-                  </div>
-                  <div class="col-md-6">
-                    <ul id="contacts" class="list-group">
-                      <!-- Contact Object li.list-group-item.contact will be added here by js -->
-                    </ul>
-                  </div>
-                </div>
-              </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
   
 <script type="text/javascript" language="javascript" src="js/main.js"></script> 
 <script type="text/javascript" language="javascript" src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>

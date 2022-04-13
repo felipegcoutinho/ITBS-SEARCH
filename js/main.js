@@ -85,8 +85,7 @@ $(document).ready(function () {
                         '<a href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
                         '<a href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
                         '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
-                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div> ' +
-                        '<a class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pen"></i> Editar</a>';
+                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div>';
 
                 },
                 "targets": 'Manuais'
