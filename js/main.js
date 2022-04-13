@@ -6,7 +6,7 @@ function format(d) {
 
 $(document).ready(function () {
     var table = $('#tabela_main').DataTable({
-        ajax: "banco.json",
+        ajax: "https://intricate-muse-332814-default-rtdb.firebaseio.com/.json",
         dom: 'Plfrtip',
         language:
         {
@@ -85,7 +85,9 @@ $(document).ready(function () {
                         '<a href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
                         '<a href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
                         '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
-                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div>';
+                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div> '+
+                        '<a class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pen"></i> Editar</a>';
+                        
                 },
                 "targets": 'Manuais'
             },   
