@@ -1,7 +1,7 @@
 /* Formatting function for row details - modify as you need */
 function format(d) {
     // `d` is the original data object for the row
-    return '' + d.descricao + '';
+    return '' + d.descricao + '<br><a class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pen"></i> Editar</a>';
 }
 
 $(document).ready(function () {
@@ -44,37 +44,37 @@ $(document).ready(function () {
                 targets: ['Modelo', 'Setor', 'Categoria']
             },
             {
-                "render": function (data, type, row) {   
-                    if (row.phaseout === 'EM LINHA')                 
-                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-success btn-xs">'+ row.phaseout +'</span>' ;
+                "render": function (data, type, row) {
+                    if (row.phaseout === 'EM LINHA')
+                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-success btn-xs">' + row.phaseout + '</span>';
                     else {
-                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-danger btn-xs">'+ row.phaseout +'</span>' ;
-                    }                    
+                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-danger btn-xs">' + row.phaseout + '</span>';
+                    }
                 },
                 "targets": 'Modelo'
             },
 
-            {               
-                "render": function (data, type, row) {                                            
+            {
+                "render": function (data, type, row) {
                     return '<span class="badge badge-outline-dark">' + row.setor + '</span> '
                 },
                 "targets": 'Setor',
             },
 
-            {               
-                "render": function (data, type, row) {                                            
+            {
+                "render": function (data, type, row) {
                     return '<span class="badge badge-outline-success">' + row.categoria + '</span> '
                 },
                 "targets": 'Categoria',
             },
 
-            {               
-                "render": function (data, type, row) {                                            
+            {
+                "render": function (data, type, row) {
                     return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ' +
                         '<a href="# "class="btn btn-danger btn-xs">' + row.tags2 + '</a> ' +
                         '<a href="# "class="btn btn-secondary btn-xs">' + row.tags3 + '</a> ' +
                         '<a href="# "class="btn btn-info btn-xs">' + row.tags4 + '</a> ' +
-                        '<a href="# "class="btn btn-success btn-xs">' + row.tags5 + '</a> ' 
+                        '<a href="# "class="btn btn-success btn-xs">' + row.tags5 + '</a> '
                 },
                 "targets": 'tags',
             },
@@ -85,12 +85,12 @@ $(document).ready(function () {
                         '<a href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
                         '<a href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
                         '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
-                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div> '+
+                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div> ' +
                         '<a class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pen"></i> Editar</a>';
-                        
+
                 },
                 "targets": 'Manuais'
-            },   
+            },
 
             {
                 "visible": false,
