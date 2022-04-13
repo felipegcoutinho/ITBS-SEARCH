@@ -44,25 +44,14 @@ $(document).ready(function () {
                 targets: ['Modelo', 'Setor', 'Categoria']
             },
             {
-                "render": function (data, type, row) {
-                    return '<div class="btn-group">' +
-                        '<a href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
-                        '<a href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
-                        '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
-                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div>';
+                "render": function (data, type, row) {   
+                    if (row.phaseout === 'EM LINHA')                 
+                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-success btn-xs">'+ row.phaseout +'</span>' ;
+                    else {
+                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-danger btn-xs">'+ row.phaseout +'</span>' ;
+                    }                    
                 },
-                "targets": 'Manuais'
-            },
-
-            {               
-                "render": function (data, type, row) {                                            
-                    return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ' +
-                        '<a href="# "class="btn btn-danger btn-xs">' + row.tags2 + '</a> ' +
-                        '<a href="# "class="btn btn-secondary btn-xs">' + row.tags3 + '</a> ' +
-                        '<a href="# "class="btn btn-info btn-xs">' + row.tags4 + '</a> ' +
-                        '<a href="# "class="btn btn-success btn-xs">' + row.tags5 + '</a> ' 
-                },
-                "targets": 'tags',
+                "targets": 'Modelo'
             },
 
             {               
@@ -79,16 +68,28 @@ $(document).ready(function () {
                 "targets": 'Categoria',
             },
 
-            {
-                "render": function (data, type, row) {   
-                    if (row.phaseout === 'EM LINHA')                 
-                        return '<span class="badge badge-outline-dark">' + row.modelo + '</span> <span class="btn btn-outline-success btn-xs">'+ row.phaseout +'</span>' ;
-                    else {
-                        return '<span class="badge badge-outline-dark">' + row.modelo + '</span> <span class="btn btn-outline-danger btn-xs">'+ row.phaseout +'</span>' ;
-                    }                    
+            {               
+                "render": function (data, type, row) {                                            
+                    return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ' +
+                        '<a href="# "class="btn btn-danger btn-xs">' + row.tags2 + '</a> ' +
+                        '<a href="# "class="btn btn-secondary btn-xs">' + row.tags3 + '</a> ' +
+                        '<a href="# "class="btn btn-info btn-xs">' + row.tags4 + '</a> ' +
+                        '<a href="# "class="btn btn-success btn-xs">' + row.tags5 + '</a> ' 
                 },
-                "targets": 'Modelo'
+                "targets": 'tags',
             },
+
+            {
+                "render": function (data, type, row) {
+                    return '<div class="btn-group">' +
+                        '<a href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
+                        '<a href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
+                        '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
+                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div>';
+                },
+                "targets": 'Manuais'
+            },   
+
             {
                 "visible": false,
                 "targets": ['Guia', 'Datasheet', 'Manual', 'Pagina']
