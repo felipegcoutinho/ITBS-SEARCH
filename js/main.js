@@ -116,7 +116,7 @@ $(document).ready(function () {
                     return '<div class="btn-group">' +
                         '<a target="_blank" href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
                         '<a target="_blank" href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
-                        '<a target="_blank" href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
+                        '<a target="_blank" href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a></div> ' +
                         '<a target="_blank" href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-arrow-up-right"></i> Página</a></div>';
 
                 },
