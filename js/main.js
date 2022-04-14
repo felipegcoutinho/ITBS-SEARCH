@@ -77,11 +77,36 @@ $(document).ready(function () {
 
             {
                 "render": function (data, type, row) {
-                    return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ' +
-                        '<a href="# "class="btn btn-danger btn-xs">' + row.tags2 + '</a> ' +
-                        '<a href="# "class="btn btn-secondary btn-xs">' + row.tags3 + '</a> ' +
-                        '<a href="# "class="btn btn-info btn-xs">' + row.tags4 + '</a> ' +
-                        '<a href="# "class="btn btn-success btn-xs">' + row.tags5 + '</a> '
+                    if (row.tags1 === '') 
+                        return '';
+                    
+                    else {
+                        return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ';
+                    }
+                    if (row.tags2 === '')
+                        return  '';
+                    
+                    else {
+                        return '<a href="# "class="btn btn-warning btn-xs">' + row.tags2 + '</a> ';
+                    }
+                    if (row.tags3 === '')
+                        return  '';
+                    
+                    else {
+                        return '<a href="# "class="btn btn-warning btn-xs">' + row.tags3 + '</a> ';
+                    }
+                    if (row.tags4 === '')
+                        return  '';
+                    
+                    else {
+                        return '<a href="# "class="btn btn-warning btn-xs">' + row.tags4 + '</a> ';
+                    }
+                    if (row.tags5 === '')
+                        return  '';
+                    
+                    else {
+                        return '<a href="# "class="btn btn-warning btn-xs">' + row.tags5 + '</a> ';
+                    }
                 },
                 "targets": 'Tags',
             },
