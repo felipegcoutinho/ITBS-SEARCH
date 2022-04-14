@@ -83,6 +83,7 @@ $(document).ready(function () {
                     else {
                         return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ';
                     }
+                    
                     if (row.tags2 === '')
                         return  '';
                     
