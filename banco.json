@@ -2,7 +2,7 @@
   "data": [
     {
       "modelo": "WOM 5A MIMO",
-      "phaseout": "EM LINHA",
+      "status": "EM LINHA",
       "setor": "Empresarial",
       "categoria": "Access Point",
       "tags1": "A",
@@ -21,7 +21,7 @@
     
     {
       "modelo": "AP 1750 AC",
-      "phaseout": "PHASE OUT",
+      "status": "PHASE-OUT",
       "setor": "Empresarial",
       "categoria": "Access Point",
       "tags1": "A",

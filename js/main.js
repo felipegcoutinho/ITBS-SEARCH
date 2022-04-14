@@ -45,13 +45,20 @@ $(document).ready(function () {
             },
             {
                 "render": function (data, type, row) {
-                    if (row.phaseout === 'EM LINHA')
-                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="badge-outline-success-status btn-xs ">' + row.phaseout + '</span>';
-                    else {
-                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="badge-outline-danger-status btn-xs">' + row.phaseout + '</span>';
-                    }
+                     return '<span class="badge bg-dark">' + row.modelo + '</span>';
                 },
                 "targets": 'Modelo'
+            },
+
+            {
+                "render": function (data, type, row) {
+                    if (row.status === 'EM LINHA')
+                        return '<span class="badge-outline-success-status btn-xs ">' + row.status + '</span>';
+                    else {
+                        return '<span class="badge-outline-danger-status btn-xs">' + row.status + '</span>';
+                    }
+                },
+                "targets": 'Status',
             },
 
             {
@@ -76,15 +83,15 @@ $(document).ready(function () {
                         '<a href="# "class="btn btn-info btn-xs">' + row.tags4 + '</a> ' +
                         '<a href="# "class="btn btn-success btn-xs">' + row.tags5 + '</a> '
                 },
-                "targets": 'tags',
+                "targets": 'Tags',
             },
 
             {
                 "render": function (data, type, row) {
                     return '<div class="btn-group">' +
-                        '<a href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
-                        '<a href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
-                        '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
+                        '<a target="_blank" href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
+                        '<a target="_blank" href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
+                        '<a target="_blank" href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
                         '<a target="_blank" href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-arrow-up-right"></i> Página</a></div>';
 
                 },
