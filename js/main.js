@@ -51,7 +51,8 @@ $(document).ready(function () {
             },
 
             {
-                "render": function (data, type, row) {
+                "render": function (data, type, row) 
+                {
                     if (row.status === 'EM LINHA')
                         return '<span class="badge-outline-success-status btn-xs ">' + row.status + '</span>';
                     else {
@@ -76,39 +77,50 @@ $(document).ready(function () {
             },
 
             {
-                "render": function (data, type, row) {
-                    if (row.tags1 === '') 
-                        return '';
+                "render": function (data, type, row) { 
                     
-                    else {
+                    
+                {
+                    if (row.tags1 === '')               
+                        return '';
+                     else {
                         return '<a href="# "class="btn btn-warning btn-xs">' + row.tags1 + '</a> ';
                     }
-                    
-                    if (row.tags2 === '')
-                        return  '';
-                    
-                    else {
+                }                
+                
+                {
+                    if (row.tags2 === '') 
+                        return '';
+                     else {
                         return '<a href="# "class="btn btn-warning btn-xs">' + row.tags2 + '</a> ';
                     }
-                    if (row.tags3 === '')
-                        return  '';
-                    
-                    else {
+                } 
+
+                {
+                    if (row.tags3 === '') {
+                        return '';
+                    } else {
                         return '<a href="# "class="btn btn-warning btn-xs">' + row.tags3 + '</a> ';
                     }
-                    if (row.tags4 === '')
-                        return  '';
-                    
-                    else {
+                }
+
+                {
+                    if (row.tags4 === '') {
+                        return '';
+                    } else {
                         return '<a href="# "class="btn btn-warning btn-xs">' + row.tags4 + '</a> ';
                     }
-                    if (row.tags5 === '')
-                        return  '';
-                    
-                    else {
+                }
+
+                {
+                    if (row.tags5 === '') {
+                        return '';
+                    } else {
                         return '<a href="# "class="btn btn-warning btn-xs">' + row.tags5 + '</a> ';
                     }
-                },
+                }
+                
+            },
                 "targets": 'Tags',
             },
 

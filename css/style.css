@@ -2,7 +2,6 @@ html {
   color: #FFF;
 }
 
-
 body {
   font-family: jetbrains Mono, Cascadia Mono !important;
   font-size: 14px;
@@ -10,7 +9,7 @@ body {
 }
 
 .bg-white {
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   border-radius: 5px;
   position: relative;
   z-index: 1;
@@ -40,19 +39,25 @@ body {
   background-color: #000000;
 }
 
-.dtsp-subRow2 , .dtsp-title, .dtsp-clearAll, .dtsp-showAll, .dtsp-collapseAll{
+.dtsp-subRow2,
+.dtsp-title,
+.dtsp-clearAll,
+.dtsp-showAll,
+.dtsp-collapseAll {
   display: none !important;
 }
 
-.table > thead {
+.table>thead {
   background-color: #ffe3b6 !important;
 }
 
-.sorting, .sorting_asc {
+.sorting,
+.sorting_asc {
   background-image: none !important;
 }
 
-table.dataTable.compact thead th, table.dataTable.compact thead td {
+table.dataTable.compact thead th,
+table.dataTable.compact thead td {
   padding: 4px 17px;
   font-size: 13px;
   text-transform: uppercase;
@@ -83,8 +88,6 @@ table.dataTable tbody tr.selected {
 table.dataTable tbody tr {
   background-color: transparent !important;
 }
-
-
 
 table.dataTable.no-footer {
   border-bottom: 0px solid #111 !important;
@@ -162,9 +165,6 @@ div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dataTables_
   padding: .15rem .1rem;
   font-size: .650rem;
 }
-
-
-
 
 .badge-outline-warning {
   color: #ffc107;
