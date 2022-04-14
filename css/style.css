@@ -6,7 +6,7 @@ html {
 body {
   font-family: jetbrains Mono, Cascadia Mono !important;
   font-size: 14px;
-  background: url(/Untitled-1.png) repeat;
+  background: url(/Untitled-1.Xpng) repeat;
 }
 
 .bg-white {
@@ -37,7 +37,7 @@ body {
 }
 
 .bg-darker {
-  background-color: #543737;
+  background-color: #000000;
 }
 
 .dtsp-subRow2 , .dtsp-title, .dtsp-clearAll, .dtsp-showAll, .dtsp-collapseAll{

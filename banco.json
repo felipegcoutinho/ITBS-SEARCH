@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "modelo": "WOM 5A MIMO",
+      "modelo": "Kit WOM 5A MIMO",
       "status": "EM LINHA",
       "setor": "Empresarial",
       "categoria": "Access Point",
@@ -20,7 +20,7 @@
     
     
     {
-      "modelo": "AP 1750 AC",
+      "modelo": "WOG 212",
       "status": "PHASE-OUT",
       "setor": "Empresarial",
       "categoria": "Access Point",
