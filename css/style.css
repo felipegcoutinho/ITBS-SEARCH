@@ -2,6 +2,13 @@ html {
   color: #FFF;
 }
 
+/*
+body {
+  font-family: Cascadia Mono !important;
+  font-size: 14px;
+}
+*/
+
 .bg-green {
   background-color: #157347;
 }
@@ -10,8 +17,60 @@ html {
   background-color: #000000;
 }
 
+.dtsp-subRow2 , .dtsp-title, .dtsp-clearAll, .dtsp-showAll, .dtsp-collapseAll{
+  display: none !important;
+}
+
+.table > thead {
+  vertical-align: bottom;
+  background-color: #ffe3b6 !important;
+}
+
+.sorting, .sorting_asc {
+  background-image: none !important;
+}
+
+div.dtsp-panesContainer div.dataTables_wrapper div.dataTables_scrollBody div.dtsp-nameCont span.dtsp-pill {
+  display: inline-block;
+  background-color: #4b9472 !important;
+  border: 0px solid #cfcfcf !important;
+  text-align: center;
+  border-radius: 10px;
+  width: auto;
+  min-width: 30px;
+  color: white !important;
+  font-size: .9em;
+  padding: 0 4px;
+}
+
+div.dtsp-panesContainer div.dataTables_wrapper div.dataTables_scrollBody {
+  background: #edffed !important;
+  border-bottom: none !important;
+}
+
+table.dataTable tbody tr.selected {
+  background-color: #c0f3c0 !important;
+}
+
+table.dataTable tbody tr {
+  background-color: transparent !important;
+}
+
 .bg-white {
-  background-color: #FFF;
+  background-color: #fff !important;
+}
+
+table.dataTable.no-footer {
+  border-bottom: 0px solid #111 !important;
+}
+
+table.dataTable.compact thead th,
+table.dataTable.compact thead td {
+  border: none;
+}
+
+div.dtsp-panesContainer div.dtsp-searchPanes div.dtsp-searchPane div.dataTables_wrapper {
+  border: 0px solid #b8b8b8 !important;
 }
 
 .texto-branco {
@@ -55,7 +114,31 @@ html {
   background-color: transparent;
   background-image: none;
   border-color: #dc3545;
+  border: 1px solid;
 }
+
+.badge-outline-danger-status {
+  color: #dc3545;
+  background-color: transparent;
+  background-image: none;
+  border-color: #dc3545;
+  border: 1px solid;
+  padding: .15rem .1rem;
+  font-size: .650rem;
+}
+
+.badge-outline-success-status {
+  color: #28a745;
+  background-color: transparent;
+  background-image: none;
+  border-color: #28a745;
+  border: 1px solid;
+  padding: .15rem .1rem;
+  font-size: .650rem;
+}
+
+
+
 
 .badge-outline-warning {
   color: #ffc107;
@@ -88,4 +171,3 @@ html {
   border-color: #343a40;
   border: 1px solid;
 }
-

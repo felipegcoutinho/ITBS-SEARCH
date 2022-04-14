@@ -1,12 +1,12 @@
 /* Formatting function for row details - modify as you need */
 function format(d) {
     // `d` is the original data object for the row
-    return '' + d.descricao + '<br><a class="btn btn-danger btn-xs" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pen"></i> Editar</a>';
+    return '' + d.descricao + '';
 }
 
 $(document).ready(function () {
     var table = $('#tabela_main').DataTable({
-        ajax: "https://intricate-muse-332814-default-rtdb.firebaseio.com/.json",
+        ajax: "banco.json",
         dom: 'Plfrtip',
         language:
         {
@@ -46,9 +46,9 @@ $(document).ready(function () {
             {
                 "render": function (data, type, row) {
                     if (row.phaseout === 'EM LINHA')
-                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-success btn-xs">' + row.phaseout + '</span>';
+                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="badge-outline-success-status btn-xs ">' + row.phaseout + '</span>';
                     else {
-                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="btn btn-outline-danger btn-xs">' + row.phaseout + '</span>';
+                        return '<span class="badge bg-dark">' + row.modelo + '</span> <span class="badge-outline-danger-status btn-xs">' + row.phaseout + '</span>';
                     }
                 },
                 "targets": 'Modelo'
@@ -85,7 +85,7 @@ $(document).ready(function () {
                         '<a href="' + row.guia + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Guia</a>' +
                         '<a href="' + row.datasheet + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Datasheet</a>' +
                         '<a href="' + row.manual + '" class="btn btn-secondary btn-xs"><i class="bi bi-file-earmark-pdf-fill"></i> Manual</a>' +
-                        '<a href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-globe"></i> Página</a></div>';
+                        '<a target="_blank" href="' + row.pagina + '" class="btn btn-success btn-xs"><i class="bi bi-arrow-up-right"></i> Página</a></div>';
 
                 },
                 "targets": 'Manuais'
