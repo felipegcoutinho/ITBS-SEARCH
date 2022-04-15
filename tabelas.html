@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -12,7 +13,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="css/searchPanes.dataTables.min.css">
-    
+
     <title>ITBS Produtos</title>
 </head>
 
@@ -28,17 +29,21 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a> </li>
                     <li class="nav-item"><a class="nav-link active" href="tabelas.html">Tabelas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="testes.html">Testes</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- Fim da navbar-->
-    
-    
-        <!-- Início da tabela principal-->
-        <section class="container bg-white mt-3 rounded">                    
-        
+
+
+    <!-- Início da tabela principal-->
+    <section class="container bg-white mt-3 rounded">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Adicionar Equipamentos
+        </button>
+
         <table id="tabela_main" class="table table-hover table-borderless table-responsive compact" style="width:100%">
             <thead>
                 <tr>
@@ -55,13 +60,75 @@
             </thead>
         </table>
     </section>
-        <!-- Fim da tabela principal-->
+    <!-- Fim da tabela principal-->
 </body>
-<!-- JS -->  
+
+<!-- Modal -->
+<div class="modal fade  " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" name="contactForm">
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" required placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <input type="text" class="form-control" id="status" required placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="setor">Setor</label>
+                        <input type="text" class="form-control" id="setor" placeholder="Enter City">
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoria</label>
+                        <input type="text" class="form-control" id="categoria" placeholder="Enter State">
+                    </div>
+                    <div class="form-group">
+                        <label for="importantes">Importantes</label>
+                        <input type="text" class="form-control" id="importantes" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="guia">Guia</label>
+                        <input type="text" class="form-control" id="guia" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="datasheet">Datasheet</label>
+                        <input type="text" class="form-control" id="datasheet" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="manual">Manual</label>
+                        <input type="text" class="form-control" id="manual" placeholder="Enter Zip Code">
+                    </div>
+                    <div class="form-group">
+                        <label for="pagina">Página</label>
+                        <input type="text" class="form-control" id="pagina" placeholder="Enter Zip Code">
+                    </div>
+                    <br>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" id="addBtn" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JS -->
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/searchpanes/2.0.0/js/dataTables.searchPanes.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
+<script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/searchpanes/2.0.0/js/dataTables.searchPanes.min.js"></script>
+<script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" language="javascript" src="js/main.js"></script>
+<script type="text/javascript" language="javascript" src="js/app.js"></script>
+<script type="text/javascript" language="javascript" src="js/app-bd.js"></script>
 </html>
