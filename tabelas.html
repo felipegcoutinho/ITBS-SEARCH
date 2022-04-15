@@ -5,15 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" type="text/css" href="css/searchPanes.dataTables.min.css">
-
     <title>ITBS Produtos</title>
 </head>
 
@@ -63,8 +60,39 @@
     <!-- Fim da tabela principal-->
 </body>
 
+<!-- JS -->
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/searchpanes/2.0.0/js/dataTables.searchPanes.min.js"></script>
+<script type="text/javascript" language="javascript"
+    src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
+<script type="text/javascript" language="javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCBr3cZfMJqnvmpQP8d1Fcm68wXjdcMU50",
+        authDomain: "intricate-muse-332814.firebaseapp.com",
+        databaseURL: "https://intricate-muse-332814-default-rtdb.firebaseio.com",
+        projectId: "intricate-muse-332814",
+        storageBucket: "intricate-muse-332814.appspot.com",
+        messagingSenderId: "386475784290",
+        appId: "1:386475784290:web:48e97ceddcb409a12ff93b"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script type="text/javascript" language="javascript" src="js/app.js"></script>
+<script type="text/javascript" language="javascript" src="js/app-bd.js"></script>
+
 <!-- Modal -->
-<div class="modal fade  " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog  ">
         <div class="modal-content">
             <div class="modal-header">
@@ -72,14 +100,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="post" name="contactForm">
+                <form id="form-equipamentos"> 
                     <div class="form-group">
                         <label for="modelo">Modelo</label>
                         <input type="text" class="form-control" id="modelo" required placeholder="Enter name">
                     </div>
                     <div class="form-group">
-                        <label for="status">Status</label>
-                        <input type="text" class="form-control" id="status" required placeholder="Enter Email">
+                        <label for="statuss">Status</label>
+                        <input type="text" class="form-control" id="statuss" required placeholder="Enter Email">
                     </div>
                     <div class="form-group">
                         <label for="setor">Setor</label>
@@ -90,8 +118,8 @@
                         <input type="text" class="form-control" id="categoria" placeholder="Enter State">
                     </div>
                     <div class="form-group">
-                        <label for="importantes">Importantes</label>
-                        <input type="text" class="form-control" id="importantes" placeholder="Enter Zip Code">
+                        <label for="tags1">Importantes</label>
+                        <input type="text" class="form-control" id="tags1" placeholder="Enter Zip Code">
                     </div>
                     <div class="form-group">
                         <label for="guia">Guia</label>
@@ -109,26 +137,19 @@
                         <label for="pagina">Página</label>
                         <input type="text" class="form-control" id="pagina" placeholder="Enter Zip Code">
                     </div>
+                    <div class="form-group">
+                        <label for="descricao">descricao</label>
+                        <input type="text" class="form-control" id="descricao" placeholder="Enter Zip Code">
+                    </div>
                     <br>
-                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="addBtn" class="btn btn-primary">Submit</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" id="addBtn" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
 </div>
-<!-- JS -->
-<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-<script type="text/javascript" language="javascript"
-    src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript"
-    src="https://cdn.datatables.net/searchpanes/2.0.0/js/dataTables.searchPanes.min.js"></script>
-<script type="text/javascript" language="javascript"
-    src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" language="javascript" src="js/app.js"></script>
-<script type="text/javascript" language="javascript" src="js/app-bd.js"></script>
+
 </html>
