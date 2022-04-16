@@ -17,6 +17,22 @@
       "descricao": "- 24 Portas RJ45 Gigabit Ethernet (10/10/1000 Mbps)<br> - 4 Slots Mini-GBIC/SFP (1000 Mbps) Compartilhados<br>- PoE: 180 W de potência máxima total"
     },
     {
+      "modelo": "Kit WdsadsadsadOM 5A MIMO",
+      "status": "EM LIsadNHA",
+      "setor": "Empresadsarial",
+      "categoria": "Accadess Point",
+      "tags1": "fA",
+      "tags2": "adfB",
+      "tags3": "Cdfd",
+      "tags4": "fD",
+      "tags5": "E",
+      "guia": "httpfdfs://backend.intelbras.com/sites/default/files/2021-02/Guia_AP_1350_1750_01-21_site.pdf",
+      "datasheet": "https:/df/backend.intelbras.com/sites/default/files/2020-08/Datasheet-AP-1750-AC.pdf",
+      "manual": "https://madafadnual-zeus-os.intelbras.com.br/",
+      "pagina": "https://www.fafdfintelbras.com/pt-br/access-point-dual-band-ac-de-alta-velocidade-ap-1750-ac",
+      "descricao": "- 24 Portas RfaJ45 Gigabit Ethernet (10/10/1000 Mbps)<br> - 4 Slots Mini-GBIC/SFP (1000 Mbps) Compartilhados<br>- PoE: 180 W de potência máxima total"
+    },
+    {
       "modelo": "WOG 212",
       "status": "PHASE-OUT",
       "setor": "Empresarial",
