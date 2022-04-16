@@ -6,7 +6,7 @@ function format(d) {
 
 $(document).ready(function () {
     var table = $('#tabela_main').DataTable({
-        ajax: "https://intricate-muse-332814-default-rtdb.firebaseio.com/.json",
+        ajax: "",
         dom: 'Plfrtip',
         language:
         {
