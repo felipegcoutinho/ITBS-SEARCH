@@ -27,6 +27,11 @@ $(function () {
     })
 });
 
+//load older conatcts as well as any newly added one...
+dataRef.on("child_added", function(snap) {
+    console.log("added", snap.key, snap.val());
+    $('#contacts').append(contactHtmlFromObject(snap.val()));
+  });
 
 
 
